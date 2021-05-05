@@ -5,7 +5,7 @@ const db = pgp({
   password: 'postgres',
   host: 'localhost',
   port: 5432,
-  database: 'db_fazenda'
+  database: 'fazenda_db'
 });
 
 module.exports = db;
