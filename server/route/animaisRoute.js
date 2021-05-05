@@ -17,8 +17,7 @@ router.get('/animais/:id', async function (req, res) {
 router.post('/animais', async function (req, res) {
   const animal = req.body;
   const newAnimal = await animaisService.saveAnimal(animal);
-  console.log(newAnimal);
-  res.json(newAnimal);
+  return res.json(newAnimal);
 });
 
 router.put('/animais/:id', async function (req, res) {
