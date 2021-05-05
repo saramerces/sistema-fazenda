@@ -1,0 +1,30 @@
+{
+  "name": "sistema-fazenda",
+  "version": "1.0.0",
+  "description": "Sistemas de informações gerenciais para fazenda",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/app.js",
+    "test": "jest --env node"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "./node_modules/*",
+      "database/*"
+    ],
+    "delay": 2500
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jest": "^26.6.3",
+    "pg-promise": "^10.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
