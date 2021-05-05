@@ -8,13 +8,13 @@ INSERT INTO estoque
 
 
 INSERT INTO animais
-  (femea, idade, pasto, identidade)
+  (femea, idade, piquete, pasto, identidade)
   VALUES
-  (true, 10, 1, '1234567890');
+  (true, 10, 1, 1, '1234567890');
 
 
 INSERT INTO vacinas
-  (tipo_vacina, id_produtos)
+  (tipo_vacina, id_produto)
   VALUES
   ('Tipo 1', 1),
   ('Outro Tipo', 2);
