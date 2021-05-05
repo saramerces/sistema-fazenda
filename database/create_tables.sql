@@ -17,10 +17,10 @@ CREATE TABLE estoque (
 
 CREATE TABLE animais (
 	id serial PRIMARY KEY,
-	piquete serial NOT NULL,
+	piquete integer NOT NULL,
 	pasto char(1) NOT NULL,
 	femea boolean NOT NULL,
-	idade serial NOT NULL,
+	idade integer NOT NULL,
 	identidade integer NOT NULL,
   nome varchar(30)
 );
