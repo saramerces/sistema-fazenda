@@ -76,6 +76,15 @@ test('Adicionar um animal', async function () {
 });
 
 
+test('Adicionar um animal duas vezes', async function () {
+  const data = createRandomAnimal();
+  const response1 = await request('POST', 'http://localhost:8080/animais', data);
+  const response2 = await request('POST', 'http://localhost:8080/animais', data);
+  expect(response2.status).toBe(409);
+  await animaisService.deleteAnimal(response1.data.id);
+});
+
+
 test('Atualizar um animal', async function () {
   const data = createRandomAnimal();
   const animalCreated = await animaisService.saveAnimal(data);

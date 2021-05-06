@@ -10,7 +10,11 @@ exports.getAnimal = async function (id) {
   return animal;
 };
 
-exports.saveAnimal = function (animal) {
+exports.saveAnimal = async function (animal) {
+  const existingAnimal = await animaisData.getAnimalByIdentidade(animal.identidade);
+  if (existingAnimal) {
+    throw new Error('Animal already exixts!');
+  }
   return animaisData.saveAnimal(animal);
 }
 

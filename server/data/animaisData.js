@@ -8,6 +8,10 @@ exports.getAnimal = function (id) {
   return database.oneOrNone(`SELECT * FROM animais WHERE id = ${id}`);
 };
 
+exports.getAnimalByIdentidade = function (identidade) {
+  return database.oneOrNone(`SELECT * FROM animais WHERE identidade = ${identidade}`);
+};
+
 exports.saveAnimal = function (animal) {
   return database.one(
     "INSERT INTO animais (pasto, piquete, femea, idade, identidade, nome) VALUES ($1, $2, $3, $4, $5, $6) returning *",

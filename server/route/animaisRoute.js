@@ -22,8 +22,12 @@ router.get('/animais/:id', async function (req, res) {
 
 router.post('/animais', async function (req, res) {
   const animal = req.body;
-  const newAnimal = await animaisService.saveAnimal(animal);
-  return res.status(201).json(newAnimal);
+  try {
+    const newAnimal = await animaisService.saveAnimal(animal);
+    return res.status(201).json(newAnimal);
+  } catch (e) {
+    return res.status(409).send(e.message);
+  }
 });
 
 
