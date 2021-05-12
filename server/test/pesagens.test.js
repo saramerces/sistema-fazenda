@@ -31,8 +31,7 @@ const createRandomAnimal = function () {
 const createRandomPesagem = function (id) {
   return {
     animalId: id,
-    data: new Date(),
-    peso: random.number()
+    peso: random.between(150, 300)
   }
 };
 

@@ -18,8 +18,12 @@ exports.integer = function () {
 
 exports.number = function () {
   let low  = 0;
-  let high = Number.MAX_SAFE_INTEGER;
-  return Math.random() * (high * low) + low;
+  let high = Math.pow(2, 31);
+  return Math.random() * (high - low) + low;
+};
+
+exports.between = function (min, max) {
+  return Math.random() * (max - min) + min;
 };
 
 exports.boolean = function () {

@@ -10,8 +10,8 @@ exports.getPesagem = function (id) {
 
 exports.savePesagem = function (pesagem) {
   return database.one(
-    "INSERT INTO pesagens (id_animal, data, peso) VALUES ($1, $2, $3) RETURNING *",
-    [pesagem.animalId, pesagem.data, pesagem.peso]
+    "INSERT INTO pesagens (id_animal, peso) VALUES ($1, $2) RETURNING *",
+    [pesagem.animalId, pesagem.peso]
   );
 };
 

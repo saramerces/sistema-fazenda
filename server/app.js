@@ -7,6 +7,7 @@ const PORT = 8080;
 app.use(express.json());
 app.use('/', require('./route/animaisRoute'));
 app.use('/', require('./route/pesagensRoute'));
+app.use('/', require('./route/estoqueRoute'));
 
 console.log("Endpoints routers loaded")
 console.log("Server listen on", `http://localhost:${PORT}`);
