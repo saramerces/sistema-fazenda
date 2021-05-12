@@ -6,8 +6,9 @@ const PORT = 8080;
 // Endpoints dos rescursos da API são criados em arquivos próprios
 app.use(express.json());
 app.use('/', require('./route/animaisRoute'));
+app.use('/', require('./route/pesagensRoute'));
 
-console.log("Roteadores de Endpoints carregados")
-console.log(`Iniciando servidor ouvindo em http://localhost:${PORT}`);
+console.log("Endpoints routers loaded")
+console.log("Server listen on", `http://localhost:${PORT}`);
 
 app.listen(PORT);

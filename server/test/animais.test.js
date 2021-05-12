@@ -30,6 +30,7 @@ const createRandomAnimal = function () {
   }
 }
 
+
 test('Obter todos os animais', async function () {  
   const animal1 = await animaisService.saveAnimal( createRandomAnimal() );
   const animal2 = await animaisService.saveAnimal( createRandomAnimal() );
