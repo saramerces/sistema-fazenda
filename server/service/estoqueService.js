@@ -47,5 +47,5 @@ exports.updateProduto = async function (id, produto) {
 };
 
 exports.deleteProduto = function (id) {
-  estoqueData.deleteProduto(id);
+  return estoqueData.deleteProduto(id);
 };

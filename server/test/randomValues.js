@@ -51,3 +51,14 @@ exports.createRandomPesagem = function (animalId) {
     peso: exports.number()
   }
 };
+
+exports.createRandomProduct = function () {
+  return {
+    nome: exports.string(25),
+    quantidade: exports.integer(),
+    preco: Math.floor(exports.between(10000, 90000)),
+    fabricante: exports.string(25),
+    tipo: exports.string(25),
+    notaFiscal: exports.string(50)
+  };
+};
