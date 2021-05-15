@@ -35,7 +35,7 @@ dados vazio:
 
 ```bash
 docker run -d --rm --name fazenda_db_cont \
-        -p 5432:5432
+        -p 5432:5432 \
         -e POSTGRES_USER=postgres \
         -e POSTGRES_PASSWORD=postgres \
         sig-fazenda-db
