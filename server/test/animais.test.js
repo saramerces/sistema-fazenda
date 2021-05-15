@@ -24,9 +24,9 @@ const createRandomAnimal = function () {
     pasto: randv.character(), 
     piquete: randv.integer(),
     femea: true,
-    idade: randv.integer(),
-    identidade: randv.integer(),
-    nome: randv.string(10)
+    categoria: randv.string(10),
+    lote: randv.integer(),
+    identidade: randv.integer()
   }
 }
 

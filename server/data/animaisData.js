@@ -14,15 +14,15 @@ exports.getAnimalByIdentidade = function (identidade) {
 
 exports.saveAnimal = function (animal) {
   return database.one(
-    "INSERT INTO animais (pasto, piquete, femea, idade, identidade, nome) VALUES ($1, $2, $3, $4, $5, $6) returning *",
-    [animal.pasto, animal.piquete, animal.femea, animal.idade, animal.identidade, animal.nome]
+    "INSERT INTO animais (pasto, piquete, femea, categoria, lote, identidade) VALUES ($1, $2, $3, $4, $5, $6) returning *",
+    [animal.pasto, animal.piquete, animal.femea, animal.categoria, animal.lote, animal.identidade]
   );
 };
 
 exports.updateAnimal = function (id, animal) {
   return database.none(
-    "UPDATE animais SET pasto = $1, piquete = $2, femea = $3, idade = $4, identidade = $5, nome = $6 WHERE id = $7",
-    [animal.pasto, animal.piquete, animal.femea, animal.idade, animal.identidade, animal.nome, id]
+    "UPDATE animais SET pasto = $1, piquete = $2, femea = $3, categoria = $4, lote = $5, identidade = $6 WHERE id = $7",
+    [animal.pasto, animal.piquete, animal.femea, animal.categoria, animal.lote, animal.identidade, id]
   );
 };
 

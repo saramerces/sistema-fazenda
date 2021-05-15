@@ -19,9 +19,9 @@ CREATE TABLE animais (
 	piquete serial NOT NULL,
 	pasto integer NOT NULL,
 	femea boolean NOT NULL,
-	idade serial NOT NULL,
-  identidade integer NOT NULL,
-  nome varchar(30)
+	categoria varchar(30) NOT NULL,
+  lote integer NOT NULL,
+  identidade integer NOT NULL
 );
 
 CREATE TABLE vacinas (
